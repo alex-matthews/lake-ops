@@ -24,7 +24,7 @@ nodes:
   - hostname: "k8s-nuc"
     ipAddress: "192.168.100.2"
     installDisk: "/dev/nvme0n1"
-    talosImageURL: factory.talos.dev/installer/da6e5e640e48d2c9f1ba22aa3f205e17a687512b7201cff5c5c47ef0fab32cb1
+    talosImageURL: factory.talos.dev/installer/97bf8e92fc6bba0f03928b859c08295d7615737b29db06a97be51dc63004e403
     controlPlane: true
     networkInterfaces:
       - deviceSelector:
@@ -54,25 +54,7 @@ patches:
       time:
         disabled: false
         servers:
-          - t
-          - i
-          - m
-          - e
-          - .
-          - c
-          - l
-          - o
-          - u
-          - d
-          - f
-          - l
-          - a
-          - r
-          - e
-          - .
-          - c
-          - o
-          - m
+          - time.cloudflare.com
   - "@./patches/global/cluster-discovery.yaml"
   - "@./patches/global/containerd.yaml"
   - "@./patches/global/disable-search-domain.yaml"
